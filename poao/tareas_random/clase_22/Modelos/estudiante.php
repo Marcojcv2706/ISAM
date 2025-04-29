@@ -1,4 +1,6 @@
 <?php
+namespace Modelos;
+
 Class estudiante {
     private string $nombre;
     private string $legajo;
@@ -13,16 +15,13 @@ Class estudiante {
     public function setNombre(string $nombre): void{
         $this->nombre = $nombre;
     }
-    public function getLegajo(): string {
+    public function getLegajo(): int {
         return $this->legajo;
     }
-    public function setLegajo(string $legajo): void{
+    public function setLegajo(int $legajo): void{
         $this->legajo = $legajo;
     }
     public function mostrarinformacion(): void {
         echo "El estudiante se llama {$this->nombre}";
     }
 }
-// Instanciacion o creacion del objeto
-$libro = new estudiante("el super libro libroso" , "el insano" , 12343124);
-$libro->mostrarinformacion();
